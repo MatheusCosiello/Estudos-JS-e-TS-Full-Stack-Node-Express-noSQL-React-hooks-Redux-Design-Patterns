@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <section class="container">
+    <h1>Calculadora de IMC</h1>
+    <p><b>IMC</b> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>Resultado</b></p>
+     <p>Menos do que 18,5  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  Abaixo do peso</p>
+      <p>Entre 18,5 e 24,9  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;	Peso normal</p>
+      <p>Entre 25 e 29,9  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  	Sobrepeso</p>
+      <p>Entre 30 e 34,9  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  	Obesidade grau 1</p>
+      <p>Entre 35 e 39,9  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  	Obersidade grau 2</p>
+      <p>Mais do que 40  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  	Obesidade grau 3</p>
+    
+    <form action="" method="post" class="form" id="form">
+    
+      <label for="peso">Peso</label>
+      <input type="number" id="peso" name="peso" min="0">
+
+      <label for="altura">Altura</label>
+      <input type="number" id="altura" name="altura" min="0">
+
+      <button type="submit">Calcular</button>
+    </form>
+    <div id="resultado"></div>
+  </section>
+
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
