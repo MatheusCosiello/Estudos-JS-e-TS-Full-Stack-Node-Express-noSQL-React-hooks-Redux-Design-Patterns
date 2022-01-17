@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Calculadora de IMC</title>
+  <title>Calcule seu IMC</title>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -20,20 +20,16 @@
       <p>Entre 30 e 34,9  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  	Obesidade grau 1</p>
       <p>Entre 35 e 39,9  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  	Obersidade grau 2</p>
       <p>Mais do que 40  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  	Obesidade grau 3</p>
-    
-    <form action="" method="post" class="form" id="form">
-    
+    <form action="/" id="formulario" method="POST">
       <label for="peso">Peso</label>
-      <input type="number" id="peso" name="peso" min="0">
-
+      <input type="text" id="peso" name="peso">
       <label for="altura">Altura</label>
-      <input type="number" id="altura" name="altura" min="0">
-
-      <button type="submit">Calcular</button>
+      <input type="text" id="altura" name="altura">
+      <button type="submit">Enviar</button>
     </form>
+
     <div id="resultado"></div>
   </section>
-
 
   <script src="./assets/js/main.js"></script>
 </body>
