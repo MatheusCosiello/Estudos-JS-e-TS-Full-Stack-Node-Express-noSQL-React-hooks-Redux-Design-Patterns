@@ -39,13 +39,13 @@ function getNivelImc (imc) {
   if (imc < 18.5) return nivel[0];
 }
 
-function getImc (peso, altura) {
+function getImc (peso, altura) { // function calcula imc
   const imc = peso / altura ** 2;
   return imc.toFixed(2);
 }
 
 function criaP () {
-  const p = document.createElement('p');
+  const p = document.createElement('p'); // cria elementos html
   return p;
 }
 
@@ -56,11 +56,11 @@ function setResultado (msg, isValid) {
   const p = criaP();
 
   if (isValid) {
-    p.classList.add('paragrafo-resultado');
+    p.classList.add('paragrafo-resultado');  // adiciona um class a um elemento html
   } else {
     p.classList.add('bad');
   }
 
   p.innerHTML = msg;
-  resultado.appendChild(p);
+  resultado.appendChild(p); // adiciona elemento html atraves do metodo appendchild
 }
