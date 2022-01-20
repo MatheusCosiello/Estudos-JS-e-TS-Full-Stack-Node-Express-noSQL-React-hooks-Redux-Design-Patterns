@@ -15,3 +15,4 @@ if (usuarioRank >= 1000) {
 const usuarioRank = 1000;
 //                 IF + condicional   valor para TRUE   Else  valor para falso
 const nivelUsuario = usuarioRank >= 1000 ? "Usuario VIp" : "usuario Normal" ; 
+//---------------------------------------------------------------------------------
