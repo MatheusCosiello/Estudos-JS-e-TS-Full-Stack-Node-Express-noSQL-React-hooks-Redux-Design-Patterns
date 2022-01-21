@@ -2,13 +2,16 @@
 
 const data = new Date();
 
+function zeroAEsquerda(num){
+    return num >= 10 ? num : `0${num}`
+};
 
-const day = data.getDate();                 //dia
+const day = zeroAEsquerda(data.getDate());                 //dia
 const dayOfWeek = data.getDay();            //dia da semana
 const month = data.getMonth();              //mes
-const year = data.getFullYear();            //ano
-const hour = data.getHours();               //hora
-const minute = data.getMinutes();           //minuto
+const year = zeroAEsquerda(data.getFullYear());            //ano
+const hour = zeroAEsquerda(data.getHours());               //hora
+const minute = zeroAEsquerda(data.getMinutes());           //minuto
 
 let dayOfWeekText;                          //texto dia da semana
 let monthText;                              //texto mes
@@ -75,12 +78,7 @@ switch (month) {                             // swtich-case texto Mes
         monthText = "Dezembro";
     break;
 }
-let Header = `${dayOfWeekText},${day} de ${monthText} de ${year} Hora:${hour}:${minute}` ;
 
+const h1 = document.querySelector("#h1-text");
 
-
-console.log(Header);
-
-
-
-
+h1.innerHTML = `${dayOfWeekText} | ${day} de ${monthText} de ${year} | ${hour}:${minute}`;
