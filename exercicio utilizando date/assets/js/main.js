@@ -1,5 +1,8 @@
 // dia da semana texto, dia-mes-ano-hora
 
+
+//codigo criado utilizando meu conhecimento adquirido ate aqui.
+
 const data = new Date();
 
 function zeroAEsquerda(num){
@@ -7,8 +10,8 @@ function zeroAEsquerda(num){
 };
 
 const day = zeroAEsquerda(data.getDate());                 //dia
-const dayOfWeek = data.getDay();            //dia da semana
-const month = data.getMonth();              //mes
+const dayOfWeek = data.getDay();                           //dia da semana
+const month = data.getMonth();                             //mes
 const year = zeroAEsquerda(data.getFullYear());            //ano
 const hour = zeroAEsquerda(data.getHours());               //hora
 const minute = zeroAEsquerda(data.getMinutes());           //minuto
@@ -82,3 +85,14 @@ switch (month) {                             // swtich-case texto Mes
 const h1 = document.querySelector("#h1-text");
 
 h1.innerHTML = `${dayOfWeekText} | ${day} de ${monthText} de ${year} | ${hour}:${minute}`;
+ 
+
+
+// Para objeto Date podemos utlizilar algumas automoções do proprio JS 
+// codigo utilizando automação do propria do js 
+
+/*
+const data = new Date();
+const h1 = document.querySelector('.h1class');
+h1.innerHTML = data.toLocaleDateString('pt-BR', { dateStyle : 'full', timeStyle : 'short'});
+*/
