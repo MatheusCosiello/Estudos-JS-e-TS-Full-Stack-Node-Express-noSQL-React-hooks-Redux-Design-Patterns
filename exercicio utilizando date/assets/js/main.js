@@ -92,7 +92,7 @@ h1.innerHTML = `${dayOfWeekText} | ${day} de ${monthText} de ${year} | ${hour}:$
 // codigo utilizando automação do propria do js 
 
 /*
-const data = new Date();
 const h1 = document.querySelector('.h1class');
+const data = new Date();
 h1.innerHTML = data.toLocaleDateString('pt-BR', { dateStyle : 'full', timeStyle : 'short'});
 */
