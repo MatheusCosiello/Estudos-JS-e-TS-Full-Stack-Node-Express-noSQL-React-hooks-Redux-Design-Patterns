@@ -27,3 +27,18 @@ const [primeiroNumero, segundoNumero] = numeros;
 console.log(primeiroNumero,segundoNumero); // exibe 1 , 2
 
 // aqui foi atribuido o valor da variavel numeros as variaveis primeiroNumero, segundoNumero atraves do indici
+//------------------------------------------------------------------------------------------
+// operador rest ...
+const numero = [1,2,3,4,5,6,7,8,9];
+const [primeiroNumero, segundoNumero, ...resto] = numeros;
+console.log(resto); // exibe 3,4,5,6,7,8,9
+//... é o operador rest ele capta todo restante da informação da array que não foi atribuida
+//... tambem é chamado de spread quando é utilizado apra espalhar a informação
+//----------------------------------------------------------------------------------------------
+//                                  part 3
+//      indici  0 1 2 3 4 5 6 7 8
+const numero = [1,2,3,4,5,6,7,8,9];
+const [primeiroNumero, segundoNumero, ,quartoNumero, ,sextoNumero] = numeros;
+console.log(primeiroNumero,segundoNumero); // exibe 1 , 2 , 4 ,6
+// podemos adicionar valor vazio dentro da atribuição para que possa pular um "numero" no indici
+//-------------------------------------------------------------------------------------------------
