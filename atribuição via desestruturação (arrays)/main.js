@@ -42,3 +42,11 @@ const [primeiroNumero, segundoNumero, ,quartoNumero, ,sextoNumero] = numeros;
 console.log(primeiroNumero,segundoNumero); // exibe 1 , 2 , 4 ,6
 // podemos adicionar valor vazio dentro da atribuição para que possa pular um "numero" no indici
 //-------------------------------------------------------------------------------------------------
+//                                  part 4
+//          inidici       0       1       2
+//         sub-indici   0 1 2   0 1 2   0 1 2
+const matrixNumerica= [[1,2,3],[4,5,6],[7,8,9]];
+console.log(matrixNumerica[1][2]); // exibi o numero 6
+// podemo facilitar a leitura atraves da desestruturação
+const [[lista1],[lista2],[lista3]] = matrixNumerica;
+console.log(lista2[2]); //exibi o numero 6
