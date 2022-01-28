@@ -35,3 +35,7 @@ console.log(teste,idade); // exibi Matheus, 29
 //utilizamos a seguinte linhas de codigo
 const {endereco:{rua,casa}} = pessoa;
 console.log(rua,casa); // exibi rua 1 casa 123
+//--------------part 4-----------------------------------
+//-- tambem podemos utilizar o operador ...rest
+const {nome, ...rest} = pessoa;
+console.log(nome,rest); // exibi Matheus, {todas as outras informações de pessoa}
