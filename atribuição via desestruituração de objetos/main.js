@@ -4,7 +4,7 @@ const pessoa = {
     nome :'Matheus',
     sobreNome :'Cosiello',
     idade: 29,
-    endereço : {
+    endereco : {
         rua : 'rua 1',
         casa : 123
     }
@@ -21,3 +21,17 @@ console.log(pessoa); //exibi nome da pessoa Matheus
 
 const {nome, sobreNome, idade} = pessoa;
 console.log(pessoa); // exibi matheus, cosiello, 29
+// tambem podemos atribuir um vamor diretamente a desestruturação
+// desde que a variavel esta definida com oundefined
+const {nome = "Luiz", sobreNome, idade} = pessoa;
+console.log(pessoa); // exibi Luiz, cosiello, 29
+
+//tambem podemos mudar o nome de uma variavel
+const {nome:teste, sobreNome, idade} = pessoa;
+console.log(teste,idade); // exibi Matheus, 29
+// agora variavel nome1 se chama teste
+//--------------part 3---------------------------------
+// para utilizar os dados do objeto endereco que esta contido dentro do objeto pessoa
+//utilizamos a seguinte linhas de codigo
+const {endereco:{rua,casa}} = pessoa;
+console.log(rua,casa); // exibi rua 1 casa 123
