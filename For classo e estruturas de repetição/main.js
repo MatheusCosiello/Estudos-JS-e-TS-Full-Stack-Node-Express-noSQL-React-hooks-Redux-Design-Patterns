@@ -51,6 +51,6 @@ for (let i = 0; i <= 10; i++) {
 //   podemos percorrer um array utilizando FOR
 const frutas = ['pera', 'uva', 'banana'];
 for (let i = 0; i = array.length; i++) {
-    console.log(i);
+    console.log(`indice${i}`,frutas[i]);
 };
-// exibi 0 1 2 que são os index do array
+// exibi 0 1 2 que são os index do array e os valores de cada indice
