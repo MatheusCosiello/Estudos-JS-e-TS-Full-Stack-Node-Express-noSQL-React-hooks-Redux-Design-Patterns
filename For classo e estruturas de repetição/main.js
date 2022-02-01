@@ -18,5 +18,32 @@ podemos determinar como vai ser feita a contagem em nosso incremento/decremento
                 abaixo exemplo
 */
 for (let i = 0;      i <= 500;         i+=10) {
-    console.log(`Linha${i}`); // exibi contagem de linhas apartir de 0 a 500 contando de 10 em 10
+   console.log(`Linha${i}`); // exibi contagem de linhas apartir de 0 a 500 contando de 10 em
     };
+
+//                        exemplo de decrementação
+
+for (let i = 500;      i >= 400;         i-=10) {
+    console.log(`Linha${i}`); // exibi contagem de linhas apartir de 500 are 400 contando de 10 em
+   };
+
+//                                  part 3
+// um exemplo de uso para for e laço de repetição, verificar se o umero é par ou não
+
+for (let i = 0;i <= 10; i++) {
+    const par = i % 2 ===0;
+    console.log(i, par);
+    };
+/*Exibit 
+ 0 true
+1 false
+2 true
+3 false
+4 true
+5 false
+6 true
+7 false
+8 true
+9 false
+10 true 
+*/
