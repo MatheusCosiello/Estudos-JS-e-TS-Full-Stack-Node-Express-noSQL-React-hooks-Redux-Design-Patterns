@@ -12,5 +12,7 @@ const div = document.createElement('div');
 
 // iterar os elementos do array elementos iterar = percorrer
 
+// 123123
+
 
 
