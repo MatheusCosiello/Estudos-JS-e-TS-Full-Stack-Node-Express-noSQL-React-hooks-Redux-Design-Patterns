@@ -1,6 +1,6 @@
-const numero = 9;
+const numero1 = 9;
 
-if (numero >= 10){
+if (numero1 >= 10){
     console.log('numero maior que 10');
 }else {
     console.log('numero menor que 10');

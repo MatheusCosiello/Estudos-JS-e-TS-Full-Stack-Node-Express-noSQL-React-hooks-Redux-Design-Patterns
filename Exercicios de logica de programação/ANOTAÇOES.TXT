@@ -1,0 +1,36 @@
+operadores aritméticos                  
+
++ adição / soma / concatenação
+- subtração
+* multiplicação
+** potenciação
+% retorna o resto da divisão
+
+#################################################################################
+
+ OPERADORES LOGICOS
+
+>  MAIOR QUE
+>= MAIOR OU IGUAL A
+< MENOR QUE
+<= MENOR OU IGUAL A
+== IGUALDADE (SOMENTE VALORES)
+=== IGUALDADE ESTRITA (VALORES E TIPOS)
+!= DIFERENTE  (VALOR)
+!== DIFERENTE ESTRITO (VALORES E TIPOS)
+ 
+// operadores lógicos
+ 
+&& -> AND -> E ((todas as expressões tem que ser verdadeiras para retornar true))
+ 
+|| -> OR -> ou ((se uma expressão for verdadeira retorna verdadeiro))
+ 
+! -> not -> não (inverte os valores Boolean)
+
+#################################################################################
+
+ IF -> SE | pode ser usado sozinho
+ ELSE IF -> SE NÃO | pose ter quantos eu quiser
+ Else sempre tem um if antes
+
+ 
