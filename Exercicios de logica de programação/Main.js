@@ -19,3 +19,7 @@ console.log(comparaN2(10,3)); // exibi 10
 
 const max = (N1 , N2) => N1 > N2 ? N1 : N2; ;
 console.log(max(100,5)); // exibi 100
+//--------------------------------------------------
+/* escreva uma função chamada ePaisagem que recebe 2 argumento
+largura e altura de uma imagem (number) 
+retorna true se a imagem estiver no modo paisagem */
