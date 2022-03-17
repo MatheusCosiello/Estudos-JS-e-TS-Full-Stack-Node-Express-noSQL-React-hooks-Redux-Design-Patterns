@@ -48,3 +48,16 @@ console.log(ePaisagem2(1280,1024));
     checa se o numero é mesmo um numero = retorna o proprio numero
     use a função com numero de 0 a 100
  */
+const minNumber = 0
+const maxNumber = 100;
+let xNumber = 0;
+
+while (xNumber <= 100) {
+    if ((xNumber % 3 == 0) && (xNumber % 5 == 0)) {console.log( xNumber,"fizzBuzz");}
+    else if (xNumber.isNaN(xNumber)) {console.log("teste");}
+   else if ((xNumber % 3 !== 0) && (xNumber % 5 !== 0)) {console.log( xNumber);}
+   else if (xNumber % 3 == 0) {console.log( xNumber,"fizz");}
+   else if (xNumber % 5 == 0) {console.log( xNumber,"Buzz");}
+    xNumber++
+};
+
