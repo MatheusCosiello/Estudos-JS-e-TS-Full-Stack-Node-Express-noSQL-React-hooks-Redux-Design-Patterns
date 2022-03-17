@@ -23,3 +23,28 @@ console.log(max(100,5)); // exibi 100
 /* escreva uma função chamada ePaisagem que recebe 2 argumento
 largura e altura de uma imagem (number) 
 retorna true se a imagem estiver no modo paisagem */
+
+
+const ePaisagem = (largura , altura) => largura > altura ? true : false;
+console.log(ePaisagem(1280,1024));
+
+// nesse caso podemos retirar a a parte de true e false pois
+// o js naturalmente ja responderia se acondição é verdadeira o ou falsa
+
+// refactory 1
+
+const ePaisagem2 = (largura , altura) => largura > altura;
+console.log(ePaisagem2(1280,1024));
+
+//---------------------------------------------------------------------------
+// parte 3 do exercicio | exercicio Bizz e Buzz
+
+/* escreva uma função que recebe um numero
+    retorne o seguinte
+    numero é divisivel por 3 = fizz
+    numero é divisivel por 5 = Buzz
+    numero é divisivel por 3 e 5 = fizzBuzz
+    numero não é divisivel por 3 e 5 = retorna o prorio numero
+    checa se o numero é mesmo um numero = retorna o proprio numero
+    use a função com numero de 0 a 100
+ */
