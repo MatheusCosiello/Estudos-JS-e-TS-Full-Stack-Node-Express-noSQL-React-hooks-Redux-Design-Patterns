@@ -1,0 +1,105 @@
+/*reset do css padrao */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(72.66deg,
+    #756de7 5%,
+      #150320 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+/*container principal da aplicação */
+}
+.container{
+    border: 2px solid snow;
+    padding: 30px 40px;
+    width: auto;
+}
+/*container do botão e od input */
+.container-task{
+    background-color:  rgba(255, 255, 255, 0.603);
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 15px 30px;
+}
+/* estilização do input e de seu efeito quando esta "clicado pelo usuario" */
+.container-task input{
+    flex: 3;
+    font-size: 16px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 12px;
+    font-weight: 500;
+}
+
+.container-task input:focus{
+ outline: none;
+ border-color: #150320;
+}
+/* estilização do botão e seu efeito hover */
+.button-task-add{
+    flex: 1;
+    border-radius: 5px;
+    font-weight: 500;
+    height: 100%;
+    font-size: 1rem;
+    border: none;
+    background-color: #150320;
+    color: #756de7;
+    padding: 12px;
+    margin-left: 12px;
+    cursor: pointer;
+
+}
+.button-task-add:hover{
+    background-color: rgba(177, 25, 20, 0.53);
+    color: #ffffff;
+}
+/*container da lista de tarefas */
+.task-list{
+    background-color:  rgba(255, 255, 255, 0.603);
+    border-radius: 5px;
+    padding: 30px 40px;
+    margin-top: 60px;
+    box-shadow: 0px 15px 30px;
+    width: 100%;
+
+}
+
+
+.task-item{
+    display: flex; /* texto lado a lado com icone*/
+    justify-content: space-between; /*separa os itens justificados em seus extremos*/
+    align-items: center; /*alinhando verticalmente com o centro*/
+    margin-bottom: 10px; /* separando cada tarefa da lista*/
+
+}
+
+.task-item i { /* estilizando o botao de excluir tarefa*/
+background-color: #756de7;  /* cor de fundo do botao*/
+color: #ffffff;             /*cor do icone*/
+padding: 12px;                /*desenho do quadrado do botao*/
+border-radius: 100%;          /* arredondando a borda do botao*/
+}
+
+.task-item i:hover{
+    background-color: rgba(177, 25, 20, 0.53);
+    color: #ffffff;
+}
+
+/* UTILITARIOS*/
+
+.error{
+    border: 2px solid red !important;
+}
+
+.error::placeholder{
+    color: red;
+}
