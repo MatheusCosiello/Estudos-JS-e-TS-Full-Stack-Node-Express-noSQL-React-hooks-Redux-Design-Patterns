@@ -22,12 +22,23 @@ function limpaInput(){
     inputTarefa.focus();
 }
 
+// botao apagar tarefa
+function criaBotaoApagar(li){
+    li.innerHTML += ' ';
+const botaoApagar = document.createElement('button');
+botaoApagar.innerText = 'apagar';
+botaoApagar.setAttribute('class','apagar');
+botaoApagar.setAttribute('id','apagar');
+li.appendChild(botaoApagar);
+}
+
 // criadora de tarefas
 function criaTarefa(textInput){
   const li = criaLi();
   li.innerHTML = textInput;
   tarefas.appendChild(li);
-  limpaInput()
+  limpaInput();
+  criaBotaoApagar(li);
 }
 
 // captura o evento de click do botao e retorna o valor do input para tarefa

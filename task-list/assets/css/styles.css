@@ -93,6 +93,26 @@ border-radius: 100%;          /* arredondando a borda do botao*/
     background-color: rgba(177, 25, 20, 0.53);
     color: #ffffff;
 }
+/*botao apagar e seu hover*/
+.apagar{
+    flex: 1;
+    border-radius: 5px;
+    font-weight: 500;
+    height: 100%;
+    font-size: 1rem;
+    border: none;
+    background-color: #150320;
+    color: #756de7;
+    padding: 12px;
+    margin-left: 12px;
+    cursor: pointer;
+
+}
+
+.apagar:hover{
+    background-color: rgba(177, 25, 20, 0.53);
+    color: #ffffff;
+}
 
 /* UTILITARIOS*/
 
