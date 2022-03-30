@@ -57,6 +57,7 @@ document.addEventListener('click',function (e){
 const el  = e.target;
 if (el.classList.contains('fa-trash-alt')){ 
     el.parentElement.remove();
+    salvaTarefas(); // chamando salvarTarefas no botao apagar para manipular o localStorage na ação do botao
 }
 });
 
@@ -78,5 +79,18 @@ for (let tarefa of liTarefas){
 
 // criando uma string apartir do array e convertendo em JSON
 const tarefasJSON = JSON.stringify(listaDeTarefas); 
-console.log(tarefasJSON); 
+localStorage.setItem('tarefas',tarefasJSON);
 };
+
+// traz informação do localStorage a partir da sua Key
+function AdicionaTarefasSalvas(){
+    const tarefas = localStorage.getItem('tarefas');
+// converte string gerada do json em array
+const listaDeTarefas = JSON.parse(tarefas);
+// iterando listadeTarefas devolta para o HTML
+for (let tarefa of listaDeTarefas){
+    criaTarefa(tarefa);
+}
+
+}
+AdicionaTarefasSalvas();
