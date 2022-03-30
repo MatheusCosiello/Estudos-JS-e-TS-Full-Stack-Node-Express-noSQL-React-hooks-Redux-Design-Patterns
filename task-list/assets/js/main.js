@@ -26,9 +26,11 @@ function limpaInput(){
 function criaBotaoApagar(li){
     li.innerHTML += ' ';
 const botaoApagar = document.createElement('button');
-botaoApagar.innerText = 'apagar';
-botaoApagar.setAttribute('class','apagar');
 botaoApagar.setAttribute('id','apagar');
+botaoApagar.setAttribute('title', 'botaoApagar');
+botaoApagar.classList.add("far");                       // chamando classes para icon
+botaoApagar.classList.add("fa-trash-alt");              // chamando classes para icon
+
 li.appendChild(botaoApagar);
 }
 
