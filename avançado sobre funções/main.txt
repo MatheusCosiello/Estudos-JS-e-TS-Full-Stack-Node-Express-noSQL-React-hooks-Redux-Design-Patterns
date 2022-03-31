@@ -1,0 +1,29 @@
+// revisao rapida sobre funções
+
+// declaração de funções (function hoisting)
+
+
+function hoisting significa que a engine do js
+vai elevar as declaração da funções e variaveis 
+definifas com variaveis para o topo do nosso codigo
+
+isso significa que podemos charmar
+as funções antes de sua declaração(criação)
+
+funções tambem são (frist-Class-object)
+objetos de primeira classe
+
+podem ser interpretadas em outras linguages de maneirta similar
+ representado como function expression que onde podemos chamar
+ uma função dentro de uma varivel
+
+ isso torna possivel fazer com que joguemos uma função como paremetro
+ de outra função para ele ser executada,tratar como um dado
+
+ Arrow function recurso mais novo criado em 2015 no ECS6
+
+divergente com as chamadas de function normal e geralmente utilizada 
+com this e tambem para funções extremamente simples
+
+tambem podemos colocar funções como metodos de objetos
+e chamar seu uso atraves da notação de . em objetos
