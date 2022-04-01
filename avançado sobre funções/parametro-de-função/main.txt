@@ -1,0 +1,47 @@
+estudo sobre parametros de função
+
+para funções que chamamos utilizando a palavra function e 
+para funções de function expression (função dentro de variavel)
+
+a engine do js tem uma variavel propria chamada arguments
+
+arguments sustentam todos os parametros chamados na função
+tambem podemos pesquisar arguments atraves de seu indice
+
+conhecendo a fundo essa engine, podemos fazer algumas coiss mais
+poderosas com a linguagem como no exemplo 1
+
+exemplo 1 somamos todos os valores guardados em arguments atraves
+de um laço e exibimos seu total 
+
+resumindo podemos criar ou nao parametros e argumentos em nossas 
+function
+
+parametros tambem podem ser definidos como undefined
+exemplo 2 undefined
+
+funções tambem podem retornar NaN no exemplo 3 veremos como
+funciona e como tratar
+
+soma(a , b) se enviarmos somente um numero
+
+soma(2) a engine do js retornara NaN pois estasomando
+2 + undefined
+
+para evitar isso podemos definir valores padrao para os paramentros
+dentro da function
+
+maneira mais atual define o valor diretamente na chamada do argumento
+na criação da function
+
+maneira mais antiga utilizamos logica dentro do bloco de codigos da function
+
+a unica maneira de chamar o valor padrao do parametro é utilizar
+a palavra undefined
+ pois numeros irao rescrever o valor
+ string ira comcatenar ou retornar NaN
+ null sera assumido como 0
+ false or true erro de sintax
+
+ tambem é possivel fazer atribuição via destruturação
+ basta enviar o objeto literal como parametro da function
