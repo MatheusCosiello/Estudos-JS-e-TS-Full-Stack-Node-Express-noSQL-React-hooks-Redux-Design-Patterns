@@ -45,3 +45,29 @@ a palavra undefined
 
  tambem é possivel fazer atribuição via destruturação
  basta enviar o objeto literal como parametro da function
+
+ EXEMPLO DE REST OPERATOR
+
+ NA function CONTAS podemos ver um exemplo de rest OPERATOR
+ siboliado atraves de  (3 pontos ) ...
+
+ recebemos o operador = +
+ recebemos o acumulador o valor inicial 0
+ numero utilizaremos o operador rest + numero ...10,20,30,40,50
+
+ dentro do rest operador todos os numero estão exatamente iguais
+ a uma array
+
+no comando  console.log(operador,acumulador,numeros);
+// exibi + 0 [ 10, 20, 30, 40, 50 ]
+
+fazendo um FOR OF(exibi valores do array) {{[in(exibi o indice)]}}
+podemos verificar que ...numeros é exibido identico a um array
+
+ na segunda parte do exemplo adicionamos o operador na funcao
+ com um sistema de logica
+ Se operador estritamente igual a [+,-,*,/] acumulador operador= numero;
+
+  UMA ULTIMA REGRA MUITO IMPORTANTE SOBRE REST OPERATOR
+  ELE SEMPRE DEVE SER UTILIZADO POR ULTIMO NA CHAMADA DOS paramentros
+  IGUAL AO EXEMPLO AO LADO  contas (operador, acumulador, ...numeros)
