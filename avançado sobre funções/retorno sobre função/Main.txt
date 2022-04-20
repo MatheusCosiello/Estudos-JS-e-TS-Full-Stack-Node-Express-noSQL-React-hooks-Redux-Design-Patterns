@@ -1,0 +1,17 @@
+return
+retorna um valor
+termina a função
+
+console.log exibe os valores
+return retorna os valores da função
+
+no exemplo de closing podemos ver como  um  return pode 
+retornar uma função dentro de outra função e ter um exemplo funcional
+
+a fun criaMultiplicador esta funcionando de maneira que
+retorna n(numero) x multiplicador 
+ sabendo disso colocamos  o criaMultiplicador em uma const
+duplica, triplica, quadriplica com o valor do multiplicador 2,3,4
+
+no final exibimos a const chamando nela o valor de n 
+(pois o valor do multiplicador ja foi declarado anteriormente)
