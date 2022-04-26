@@ -1,0 +1,142 @@
+tendo a função criapessoa criando objetos
+
+criamos uma função dentro do objeto (chamamos isso de metodo)
+exemplo 
+
+function criaPessoa(nome, sobrenome){
+    return{
+        nome,
+        sobrenome,
+        fala : function(assunto){
+            return `${nome} está falando sobre ${assunto}.`;
+        }
+    };
+}
+
+const p1 = criaPessoa('matheus','cosiello');
+console.log(p1.fala('programação'))
+
+nesse cosigo em especifico é mais performatico não utilizar this
+pois podemos acessar o NOME DIRETAMENTE COMO NA LINHA
+
+return `${nome} está falando sobre${assunto}.`;
+
+POREM HJ USAREMOS O THIS PARA INICIAR SUA UTILIZAÇÃO
+DENTRO DOS ESTUDOS
+------------------------------------------------------------
+quem é this ?
+ this se referencia ao proprio objeto, no nosso codigo podemos 
+ adicionar o this e e entender mais diretamente quem é this exemmplo
+ na linha do return
+
+ function criaPessoa(nome, sobrenome){
+    return{
+        nome,
+        sobrenome,
+        fala : function(assunto){
+            return `${this.nome} está falando sobre ${assunto}.`;
+        }
+    };
+}
+
+const p1 = criaPessoa('matheus','cosiello');
+console.log(p1.fala('programação')) 
+
+basicamente nesse codigo this.nome é igual p1.nome
+
+caso tivessimo uma p2 this seria o p2
+this sempre sera quem chama o objeto ou o evento
+
+podemos adicionar  o metodo imc 
+
+ imc() {
+            const indice = this.peso / (this.altura ** 2);
+            return indice.toFixed(2);
+        }
+e fazer chamada agora de p1.imc 
+console.log(p1.imc()); 
+
+é normal que objeto sejam gigantes  e uma função factory ajuda 
+vc a criar multiplus objetos desse tipe
+--------------------------------------------------------------
+// factory function (função fabrica)
+function criaPessoa(nome, sobrenome,altura,peso){
+    return{
+        nome,
+        sobrenome,
+        fala : function(assunto){
+            return `${nome} está falando sobre ${assunto}.`;
+        },
+        altura,
+        peso,
+        imc() {
+            const indice = this.peso / (this.altura ** 2);
+            return indice.toFixed(2);
+        }        
+        
+    };
+}
+
+const p1 = criaPessoa('matheus','cosiello',1.70,110);
+console.log(p1.imc()); 
+console.log(p1.fala('programação'))
+------------------------GETTER--------------------------------
+podemos tambem fazer com que a função imc  seja chamada como um
+atributo
+ ao inves de chamar console.log(p1.imc()); podemos alterar 
+ para console.log(p1.imc);
+ para isso utilizamos a palavra get 
+ficando co o codigo
+--------------------------------------------------------
+     get imc() {
+            const indice = this.peso / (this.altura ** 2);
+            return indice.toFixed(2);
+        }        
+        
+    };
+----------------Setter---------------------------
+Em nosso objeto atual não temos o nome completo
+e podemos facitar isso utilizando o Setter
+ai inves de fazer com template string utilizaremos Setter
+ e fazendo fingir que nomeCompleto não é uma função e sim um atributo
+----------------------------------------------------------------
+  nomeCompleto(){
+            return `${this.nome} ${this.sobrenome}`;
+        },
+---------------------------------------------------------------
+assim ao inves de digitar matheus , cosiello 
+em const p1 = criaPessoa('matheus','cosiello',1.70,110);
+
+podemos fazer o codigo entender que quando eu digitar
+
+matheus cosiello o matheus é o nome e o cosiello o sobrenome
+
+
+ -------------------------------------------------------------------
+ // factory function (função fabrica)
+function criaPessoa(nome, sobrenome,altura,peso){
+    return{
+        nome,
+        sobrenome,
+        nomeCompleto(){
+            return `${this.nome} ${this.sobrenome}`;
+        },
+        fala : function(assunto){
+            return `${nome} está falando sobre ${assunto}.`;
+        },
+        altura,
+        peso,
+        // Getter
+         get imc() {
+            const indice = this.peso / (this.altura ** 2);
+            return indice.toFixed(2);
+        }        
+        
+    };
+}
+
+const p1 = criaPessoa('matheus','cosiello',1.70,110);
+console.log(p1.imc); 
+console.log(p1.fala('programação'))
+
+
