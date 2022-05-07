@@ -1,6 +1,6 @@
 
 //filter map reduce
-
+//--------------------------filter----------------------------
 // filter - filtrando array funciona apenas em arrays -retonra sempre uma array com mesma quantidade ou menos
 // de elementos de uma array
 // filtra array
