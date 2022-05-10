@@ -83,7 +83,8 @@ console.log(Cliente1); // exibi Cliente { nome: 'Matheus', sobrenome: 'Cosiello'
 
 // oq faz o new ?
 
-/*cria objeto vazio
+/*
+cria objeto vazio
 assimila o comando this de cada objeto gerado a ele mesmo
 tambem exibi o construtor desse objeto
 console.log(Cliente1); // exibi Cliente { nome: 'Matheus', sobrenome: 'Cosiello' }
