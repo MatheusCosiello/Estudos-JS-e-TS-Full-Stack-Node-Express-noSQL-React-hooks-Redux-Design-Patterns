@@ -25,8 +25,6 @@ function esperaAi(msg, tempo) {
   promise.reject
 
 */
-
-
   const promises = [
     esperaAi('fase 1',3000),
     esperaAi('fase 2',500),
@@ -43,3 +41,18 @@ function esperaAi(msg, tempo) {
     console.log(erro)
   })
   
+  function baixaPagina() {
+    const emCache = true;
+  
+    if(emCache) {
+      return Promise.race('Página em cache');
+    } else {
+      return esperaAi('Baixei a página', 3000);
+    }
+  }
+  
+  baixaPagina()
+    .then(dadosPagina => {
+      console.log(dadosPagina);
+    })
+    .catch(e => console.log('ERRO', e));
