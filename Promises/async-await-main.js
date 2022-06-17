@@ -7,7 +7,7 @@ function rand(min = 0, max = 3) {
 function esperaAi(msg, tempo) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if(typeof msg !== 'string') {
+      if (typeof msg !== 'string') {
         reject('CAI NO ERRO');
         return;
       }
@@ -37,17 +37,33 @@ function esperaAi(msg, tempo) {
 //   .catch(e => console.log(e));
 
 
-async function executa(){
-  const fase1 = await esperaAi('FASE 1',rand());
-  console.log(fase1);
+//async vai permitir q utilizaemos await dentro de uma funcao para esperar 
+// que uma promisse seja finalizada
 
-  const fase2 = await esperaAi('FASE 2',rand());
-  console.log(fase2);
 
-  const fase3 = await esperaAi('FASE 3',rand());
-  console.log(fase3);
+async function executa() {
+  try {
+    const fase1 = await esperaAi('FASE 1', rand());
+    console.log(fase1);
 
-  console.log('Terminamos na fase:', fase3);
+    const fase2 = await esperaAi(2, rand());  // para de executar aqui
+    console.log(fase2);
+
+    const fase3 = await esperaAi('FASE 3', rand());
+    console.log(fase3);
+
+    console.log('Terminamos na fase:', fase3);
+  } catch(e){
+    console.log(e); // exibe o reject
+  }
 }
 
 executa();
+
+/* estados de uma prommise
+
+1 pendente  -> esta sendo executa e ainda não retornou o valor acontece geralmente quando nao tem await ou then
+2 fullfiled -> resolvida
+3 rejeitada -> rejeitada
+
+*/
