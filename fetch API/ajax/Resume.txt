@@ -1,0 +1,5 @@
+js requisição asincrona
+
+carregando paginas de maneira dinamica sem fazer um full reload da paginas
+carregando apenas componentes do pagina como por exemplo
+facebook, instagram, linkedin e etc
