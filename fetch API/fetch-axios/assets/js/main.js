@@ -1,27 +1,39 @@
+/* // utilizando fetch para extrair informações do arquivo json
 fetch('pessoas.json')
-  .then(resposta => resposta.json())
-  .then(json => carregaElementosNaPagina(json));
+.then(resposta => resposta.json()) // pegamos a resposta e convertemos em json
+.then(json => carregaElementos(json)); // pegamos a nova prommise com valor json e  enviamos para função
+ */
 
-// axios('pessoas.json')
-//   .then(resposta => carregaElementosNaPagina(resposta.data));
+// faz a mesma coisa que o fetch
+// https://axios-http.com/ptbr/docs/intro
+axios('pessoas.json')
+.then(resposta => carregaElementos(resposta.data));
 
-function carregaElementosNaPagina(json) {
+// carrega elementos na pagina atraves de um laço no json
+function carregaElementos(json){
   const table = document.createElement('table');
 
-  for(let pessoa of json) {
-    const tr = document.createElement('tr');
+for (let pessoa of json){
+    const tr = document.createElement('tr'); 
 
-    let td1 = document.createElement('td');
-    td1.innerHTML = pessoa.nome;
-    tr.appendChild(td1);
+    const td = document.createElement('td'); 
+    td.innerHTML = pessoa.nome;
+    tr.appendChild(td);
 
-    let td2 = document.createElement('td');
-    td2.innerHTML = pessoa.idade;
+    const td2 = document.createElement('td'); 
+    td2.innerHTML = pessoa.estado;
     tr.appendChild(td2);
+
+    const td3 = document.createElement('td'); 
+    td3.innerHTML = pessoa.empresa;
+    tr.appendChild(td3);
+
+    const td4 = document.createElement('td'); 
+    td4.innerHTML = pessoa.email;
+    tr.appendChild(td4);
 
     table.appendChild(tr);
   }
-
-  const resultado = document.querySelector('.resultado');
+  const resultado =document.querySelector('.resultado');
   resultado.appendChild(table);
 }
