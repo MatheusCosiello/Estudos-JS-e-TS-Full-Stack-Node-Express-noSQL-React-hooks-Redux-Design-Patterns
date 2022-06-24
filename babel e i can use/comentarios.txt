@@ -1,0 +1,18 @@
+TRANSPILADOR BABEL
+
+npm init -y 
+vv
+cria o arquivo pacage.json
+gerencia os pacotes do node para o projeto
+
+npm install --save-dev @babel/cli @babel/preset-env @babel/core
+instalando babel e dependecinas 
+
+exemplo de como instar versao especifica
+@babel/cli@7.6.4 <<<<<<
+
+convertendo o arquivo main.js atraves do babel
+npx babel main.js -o bundle.js -- presets=@babel/env
+
+npm rum babel
+atualiza o main.js para o bundle.js
