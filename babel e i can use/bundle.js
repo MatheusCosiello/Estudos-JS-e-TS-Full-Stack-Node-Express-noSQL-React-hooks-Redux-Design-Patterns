@@ -19,7 +19,8 @@ var obj = {
 
 var novoObj = _objectSpread({}, obj);
 
-console.log(novoObj); //------------------------------------
+console.log(novoObj);
+ //------------------------------------
 
 var Pessoa = /*#__PURE__*/_createClass(function Pessoa(nome, sobrenome) {
   _classCallCheck(this, Pessoa);
